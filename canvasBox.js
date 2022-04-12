@@ -16,7 +16,7 @@ const mouse = {
     y: undefined,
 }
 
-canvas.addEventListener('pointerdown', (e) => {
+canvas.addEventListener('pointerup', (e) => {
     mouse.x = e.x
     mouse.y = e.y
     for(let i = 0; i < 15; i++){
@@ -24,13 +24,22 @@ canvas.addEventListener('pointerdown', (e) => {
     }
 })
 
-canvas.addEventListener('pointermove', (e) => {
+canvas.addEventListener('mousemove', (e) => {
     mouse.x = e.x
     mouse.y = e.y
     for(let i = 0; i < 2; i++){
         particlesArray.push(new Particle())
     }
 })
+
+canvas.onpointermove = (e) => {
+    console.log('moving...')
+    mouse.x = e.x
+    mouse.y = e.y
+    for (let i = 0; i < 2; i++) {
+        particlesArray.push(new Particle())
+    }
+}
 
 
 class Particle {
