@@ -37,7 +37,7 @@ class Particle {
     constructor(){
         this.x = mouse.x
         this.y = mouse.y
-        this.size = Math.random() * 12.168 + 1
+        this.size = Math.random() * 20.168 + 1
         this.speedX = Math.random() * 3 - 1.5
         this.speedY = Math.random() * 3 - 1.5
         this.color = 'hsl(' + hue + ', 100%, 50%)'
@@ -52,7 +52,7 @@ class Particle {
         //ctx.fillStyle = 'rgba(255, 255, 255, 0.05)'
         //ctx.fillStyle = this.particleFill
         ctx.strokeStyle = this.color 
-        ctx.lineWidth = 1.68
+        ctx.lineWidth = 1.168
         ctx.beginPath()
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2)
         //ctx.fill()
