@@ -16,7 +16,7 @@ const mouse = {
     y: undefined,
 }
 
-canvas.addEventListener('pointerup', (e) => {
+canvas.addEventListener('click', (e) => {
     mouse.x = e.x
     mouse.y = e.y
     for(let i = 0; i < 15; i++){
@@ -31,15 +31,6 @@ canvas.addEventListener('mousemove', (e) => {
         particlesArray.push(new Particle())
     }
 })
-
-canvas.onpointermove = (e) => {
-    console.log('moving...')
-    mouse.x = e.x
-    mouse.y = e.y
-    for (let i = 0; i < 2; i++) {
-        particlesArray.push(new Particle())
-    }
-}
 
 
 class Particle {
