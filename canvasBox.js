@@ -16,7 +16,7 @@ const mouse = {
     y: undefined,
 }
 
-canvas.addEventListener('click', (e) => {
+canvas.addEventListener('pointerdown', (e) => {
     mouse.x = e.x
     mouse.y = e.y
     for(let i = 0; i < 15; i++){
@@ -24,7 +24,7 @@ canvas.addEventListener('click', (e) => {
     }
 })
 
-canvas.addEventListener('mousemove', (e) => {
+canvas.addEventListener('pointermove', (e) => {
     mouse.x = e.x
     mouse.y = e.y
     for(let i = 0; i < 2; i++){
