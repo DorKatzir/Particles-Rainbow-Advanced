@@ -16,46 +16,6 @@ const mouse = {
     y: undefined,
 }
 
-canvas.addEventListener('mousedown', (e) => {
-    mouse.x = e.x
-    mouse.y = e.y
-    for(let i = 0; i < 15; i++){
-        particlesArray.push(new Particle())
-    }
-})
-
-canvas.addEventListener('mousemove', (e) => {
-    mouse.x = e.x
-    mouse.y = e.y
-    for(let i = 0; i < 2; i++){
-        particlesArray.push(new Particle())
-    }
-})
-
-//mobile\tablet events:
-    //touchstart - occurs when the user touches an element
-    //touchend - occurs when the user removes the finger from an element
-    //touchcancel -
-    //touchleave
-    //touchmove - occurs when the user moves the finger across the screen
-
-canvas.addEventListener('touchmove', function(event) {
-    mouse.x = e.x
-    mouse.y = e.y
-    for (let i = 0; i < 2; i++) {
-        particlesArray.push(new Particle())
-    }
-});
-// canvas.addEventListener('toucleave', function(event) {
-//     mouse.x = e.x
-//     mouse.y = e.y
-//     for (let i = 0; i < 2; i++) {
-//         particlesArray.push(new Particle())
-//     }
-// });
- 
-
-
 
 class Particle {
     constructor(){
@@ -124,5 +84,44 @@ animate()
 
 
 
+
+ctx.canvas.addEventListener('mousedown', (e) => {
+    mouse.x = e.x
+    mouse.y = e.y
+    for(let i = 0; i < 15; i++){
+        particlesArray.push(new Particle())
+    }
+})
+
+ctx.canvas.addEventListener('mousemove', (e) => {
+    mouse.x = e.x
+    mouse.y = e.y
+    for(let i = 0; i < 2; i++){
+        particlesArray.push(new Particle())
+    }
+})
+
+//mobile\tablet events:
+    //touchstart - occurs when the user touches an element
+    //touchend - occurs when the user removes the finger from an element
+    //touchcancel -
+    //touchleave
+    //touchmove - occurs when the user moves the finger across the screen
+
+ctx.canvas.addEventListener('touchmove', function(e) {
+    mouse.x = e.x
+    mouse.y = e.y
+    for (let i = 0; i < 2; i++) {
+        particlesArray.push(new Particle())
+    }
+});
+// canvas.addEventListener('toucleave', function(event) {
+//     mouse.x = e.x
+//     mouse.y = e.y
+//     for (let i = 0; i < 2; i++) {
+//         particlesArray.push(new Particle())
+//     }
+// });
+ 
 
 
