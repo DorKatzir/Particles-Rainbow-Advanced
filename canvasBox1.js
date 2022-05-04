@@ -38,6 +38,13 @@ canvas.addEventListener('mousemove', (e) => {
     //touchcancel -
     //touchleave
     //touchmove - occurs when the user moves the finger across the screen
+canvas.addEventListener('touchstart', function(event) {
+    mouse.x = e.x
+    mouse.y = e.y
+    for (let i = 0; i < 2; i++) {
+        particlesArray.push(new Particle())
+    }
+});
 canvas.addEventListener('touchmove', function(event) {
     mouse.x = e.x
     mouse.y = e.y
